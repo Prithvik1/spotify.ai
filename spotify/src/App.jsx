@@ -3,7 +3,7 @@ import axios from "axios";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./App.css";
 
-const genAI = new GoogleGenerativeAI("AIzaSyDMryOCHpwvxSmf8FbHuhNrohlYZ_BeJfU"); // 🔁 Replace with your actual key
+const genAI = new GoogleGenerativeAI("AIzaSyDMryOCHpwvxSmf8FbHuhNrohlYZ_BeJfU"); 
 
 function App() {
   const [mood, setMood] = useState("");
@@ -22,7 +22,7 @@ function App() {
       const result = await model.generateContent(prompt);
       const text = (await result.response).text();
 
-      // Parse response into song objects
+      
       const parsedSongs = text
         .split("\n")
         .filter(Boolean)
